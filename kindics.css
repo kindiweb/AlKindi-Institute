@@ -19,7 +19,7 @@ header {
     background-color: #FF6701; /* Deep Orange */
     padding: 10px 20px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    flex-wrap: nowrap; /* Prevent wrapping */
 }
 
 .logo img {
@@ -31,6 +31,7 @@ nav ul {
     padding: 0;
     display: flex;
     gap: 10px;
+    flex-wrap: nowrap; /* Prevent wrapping */
 }
 
 nav ul li {
@@ -126,6 +127,7 @@ footer .social-icons a img {
     height: 30px;
 }
 
+/* Adjust for smaller screens */
 @media (max-width: 768px) {
     header {
         flex-direction: row; /* Keep items in a row */
@@ -158,6 +160,15 @@ footer .social-icons a img {
 @media (max-width: 480px) {
     .logo img {
         height: 40px;
+    }
+
+    nav ul {
+        flex-wrap: nowrap; /* Prevent wrapping */
+        justify-content: space-between;
+    }
+
+    nav ul li {
+        margin: 0 5px;
     }
 
     nav ul li a img {
